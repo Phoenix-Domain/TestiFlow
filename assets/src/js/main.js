@@ -3,6 +3,7 @@ const clientFeedback = document.querySelector('#clientFeedback');
 const clientRole = document.querySelector('#clientRole');
 const getTestimonialBtn = document.querySelector('#getTestimonialBtn');
 const card = document.querySelector('.card');
+
 const testimonials = [
   {
     name: "Sarah Okafor",
@@ -43,7 +44,10 @@ const testimonials = [
 
 getTestimonialBtn.addEventListener('click', e => {
   e.preventDefault();
+  
   getTestimonial();
+
+  addFadeInUpAnimation();
 
 })
 
@@ -65,4 +69,10 @@ lastIndex = randomIndex;
     clientFeedback.textContent = clientObject.feedback;
 
     clientRole.textContent = clientObject.role;
+}
+
+const addFadeInUpAnimation = () => {
+  card.classList.remove('fadeInUp');
+  void card.offsetWidth;
+  card.classList.add('fadeInUp');
 }
