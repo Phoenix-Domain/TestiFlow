@@ -40,3 +40,8 @@ const testimonials = [
     feedback: "Professional, creative, and reliable. We love our new website!"
   }
 ];
+
+getTestimonialBtn.addEventListener('click', e => {
+  e.preventDefault();
+  getTestimonial()
+})
