@@ -48,11 +48,14 @@ getTestimonialBtn.addEventListener('click', e => {
 })
 
 const getTestimonial = () => {
-  testimonials.forEach(x => {
-    clientName.textContent = x.name;
 
-    clientFeedback.textContent = x.feedback;
+  const randomIndex = Math.floor(Math.random() * (testimonials.length));
 
-    clientRole.textContent = x.role;
-  })
+  const clientObject = testimonials[randomIndex];
+  
+    clientName.textContent = clientObject.name;
+
+    clientFeedback.textContent = clientObject.feedback;
+
+    clientRole.textContent = clientObject.role;
 }
