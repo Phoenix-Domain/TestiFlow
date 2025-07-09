@@ -40,3 +40,18 @@ main{
   box-shadow: var(--box-shadow);
   cursor: pointer;
 }
+
+.fadeInUp{
+  animation: fadeInUp 0.8s linear 0s 1 normal both;
+}
+
+@keyframes fadeInUp {
+  from{
+    opacity: 0;
+    transform: translateY(60vh);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
