@@ -48,10 +48,16 @@ getTestimonialBtn.addEventListener('click', e => {
 })
 
 const getTestimonial = () => {
-
-  const randomIndex = Math.floor(Math.random() * (testimonials.length));
+  let lastIndex = -1;
+  let randomIndex;
+  do{
+     randomIndex = Math.floor(Math.random() * (testimonials.length));
+  } while (randomIndex === lastIndex)
+ 
+lastIndex = randomIndex;
 
   const clientObject = testimonials[randomIndex];
+
   
     clientName.textContent = clientObject.name;
 
