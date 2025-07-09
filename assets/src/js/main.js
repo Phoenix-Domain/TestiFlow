@@ -1,4 +1,4 @@
-const clientName = document.querySelector('#clientname');
+const clientName = document.querySelector('#clientName');
 const clientFeedback = document.querySelector('#clientFeedback');
 const clientRole = document.querySelector('#clientRole');
 const getTestimonialBtn = document.querySelector('#getTestimonialBtn');
@@ -43,5 +43,16 @@ const testimonials = [
 
 getTestimonialBtn.addEventListener('click', e => {
   e.preventDefault();
-  getTestimonial()
+  getTestimonial();
+
 })
+
+const getTestimonial = () => {
+  testimonials.forEach(x => {
+    clientName.textContent = x.name;
+
+    clientFeedback.textContent = x.feedback;
+
+    clientRole.textContent = x.role;
+  })
+}
