@@ -2,7 +2,7 @@ const clientName = document.querySelector('#clientName');
 const clientFeedback = document.querySelector('#clientFeedback');
 const clientRole = document.querySelector('#clientRole');
 const getTestimonialBtn = document.querySelector('#getTestimonialBtn');
-
+const card = document.querySelector('.card');
 const testimonials = [
   {
     name: "Sarah Okafor",
