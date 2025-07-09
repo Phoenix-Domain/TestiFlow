@@ -47,8 +47,9 @@ getTestimonialBtn.addEventListener('click', e => {
 
 })
 
+let lastIndex = -1; //To be used in the getTestimonial function
+
 const getTestimonial = () => {
-  let lastIndex = -1;
   let randomIndex;
   do{
      randomIndex = Math.floor(Math.random() * (testimonials.length));
